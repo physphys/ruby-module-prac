@@ -8,4 +8,11 @@ class DeepFreezableTest < Minitest::Test
     assert(Team::COUNTRIES.frozen?)
     assert(Team::COUNTRIES.each { |c| c.frozen? })
   end
+
+  def test_deep_freeze_of_hash
+    assert_equal({ 'Japan' => 'yen', 'US' => 'dollar', 'India' => 'rupee' },
+                 Bank::CURRENCIES)
+    assert(Bank::CURRENCIES.frozen?)
+    assert(Bank::CURRENCIES.each { |k, v| k.frozen? && v.frozen? })
+  end
 end
