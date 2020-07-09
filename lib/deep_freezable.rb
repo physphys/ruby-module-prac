@@ -8,6 +8,8 @@ module DeepFreezable
         k.freeze
         v.freeze
       end
+    else
+      raise ArgumentError, 'Only array and hash are allowed'
     end
   end
 end
