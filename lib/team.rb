@@ -1,7 +1,7 @@
-require './deep_freezable.rb'
+require './lib/deep_freezable.rb'
 
 class Team
-  extends DeepFreezable
+  extend DeepFreezable
 
   COUNTRIES = deep_freeze(%w[Japan US China])
 end

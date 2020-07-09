@@ -1,4 +1,4 @@
-require './deep_freezable.rb'
+require './lib/deep_freezable.rb'
 
 class Bank
   extend DeepFreezable
